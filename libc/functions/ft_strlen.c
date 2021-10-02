@@ -1,19 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/02 13:31:27 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/02 14:47:22 by cbukuba          ###   ########.fr       */
+/*   Created: 2021/10/02 14:15:30 by cbukuba           #+#    #+#             */
+/*   Updated: 2021/10/02 14:47:05 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include <stddef.h>
+
+typedef unsigned long	t_size;
+
+t_size	ft_strlen(const char *str)
 {
-	if (c <= 0 && c >= 127)
-		return (1);
-	else
-		return (0);
+	int	c;
+
+	c = 0;
+	while (str[c] != '\0')
+	{
+		c ++;
+	}
+	return (c);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char str[] = "";
+// 	int result = ft_strlen(str);
+// 	printf("%d", result);
+// }
