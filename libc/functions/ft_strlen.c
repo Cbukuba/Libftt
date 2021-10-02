@@ -6,15 +6,14 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 14:15:30 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/02 14:47:05 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/10/02 17:31:01 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include <stdlib.h>
 
-typedef unsigned long	t_size;
-
-t_size	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	c;
 
