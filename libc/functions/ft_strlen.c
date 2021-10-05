@@ -6,11 +6,10 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 14:15:30 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/02 17:31:01 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/10/05 07:59:50 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include <stdlib.h>
 
 size_t	ft_strlen(const char *str)
@@ -28,7 +27,7 @@ size_t	ft_strlen(const char *str)
 // #include <stdio.h>
 // int main()
 // {
-// 	char str[] = "";
+// 	char str[] = "hfjdjdghfkdldl";
 // 	int result = ft_strlen(str);
 // 	printf("%d", result);
 // }
