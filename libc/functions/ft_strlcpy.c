@@ -6,45 +6,58 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 15:51:59 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/02 17:30:53 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/10/05 09:54:23 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdlib.h>
 
-size_t	*ft_strlcpy(char * restrict dst, char const * restrict src, size_t dstsize )
+size_t	ft_strlcpy(char *restrict dst,
+					const char *restrict src, size_t dstsize )
 {
-	int				i;
-	unsigned int	cmp;
-	size_t			*lng;
+	int	i;
+	int	lng;
 
-	lng = 0;
-	cmp = 0;
-	i = 0;
-	while (src[i] != '\0' && cmp < dstsize - 1)
+	if (dstsize > 0)
 	{
-		dst[i] = src[i];
-		i ++;
-		cmp ++;
-		while (src[i])
-			lng ++;
+		i = 0;
+		while (src[i] != '\0' && i < dstsize - 1)
+		{
+			dst[i] = src[i];
+			i ++;
+		}
+		dst[i] = '\0';
 	}
-	dst[i] = '\0';
+	lng = 0;
+	while (src[lng])
+		lng ++;
 	return (lng);
 }
 
-#include <stdio.h>
-int	main()
-{
-	char dst[] = "Wassup";
-	const char  src[] = "MRFAYA";
-	unsigned int n = 3;
-    int i = 0;
-    while (i < n - 1)
-    {
-        ft_strlcpy(dst, src, 3);
-        write(1, &dst[i], 1);
-        i++;
-    }
-}
+// #include <stdio.h>
+// #include <string.h>
+
+// void test(int size)
+// {
+//     char string[] = "Hello there, Venus";
+//     char buffer[19];
+//     int r;
+
+//     r = ft_strlcpy(buffer,string,size);
+
+//     printf("Copied '%s' into '%s', length %d\n",
+//             string,
+//             buffer,
+//             r
+//           );
+// }
+
+// int main()
+// {
+//     test(19);
+//     test(10);
+//     test(1);
+//     test(0);
+
+//     return(0);
+// }
