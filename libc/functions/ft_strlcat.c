@@ -6,13 +6,13 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 10:07:25 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/07 16:49:38 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/10/07 18:26:08 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	int	i;
 	int	j;

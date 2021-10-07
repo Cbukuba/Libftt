@@ -6,14 +6,14 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 15:51:59 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/05 09:54:23 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/10/07 18:25:51 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	ft_strlcpy(char *restrict dst,
-					const char *restrict src, size_t dstsize )
+size_t	ft_strlcpy(char *dst,
+					const char *src, size_t dstsize )
 {
 	int	i;
 	int	lng;
