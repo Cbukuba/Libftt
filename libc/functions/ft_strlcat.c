@@ -6,64 +6,59 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 10:07:25 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/05 11:28:23 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/10/07 16:49:38 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// condition auqnd dstsize == taille buffer
 #include <stdlib.h>
 
-
-size_t ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {
 	int	i;
 	int	j;
+	int	cmp;
 
 	if (dstsize > 0)
 	{
 		i = 0;
 		while (dst[i] != '\0')
 			i ++;
+		cmp = 0;
+		while (src[cmp])
+			cmp ++;
 		j = 0;
-		while (src[j] != '\0')
+		while (src[j] != '\0' && i < dstsize - 1)
 		{
-			dst[i + j] = src[j];
-			j++;
+			dst[i] = src[j];
+			j ++;
+			i ++;
 		}
-	dst[i + j] = '\0';
+		dst[i] = '\0';
 	}
-	if (src[dstsize] == '\0')
-		return (i);
-	if (dstsize == 0)
-		return(i);
-	return (i + (dstsize - 1));
+	if (dstsize == cmp)
+		return (dstsize);
+	return (cmp + dstsize);
 }
 
+// #include <string.h>
+// #include <stdio.h>
 
-#include <string.h>
-#include <stdio.h>
-
-void test(int size)
-{
-    char string[] = "Hello there, Venus";
-    char buffer[19];
-    int r;
-	
-    r = ft_strlcat(string,buffer,size);
-	
-    printf("Copied '%s' into '%s', length %d\n",
-            string,
-            buffer,
-            r
-          );
-}
-
-int main()
-{
-    test(19);
-    test(10);
-    test(1);
-    test(0);
-
-    return(0);
-}
+// void test(int size)
+// {
+//     char string[] = "Hello there, Venus ";
+//     char buffer[19];
+//     int r;
+//     r = strlcat(buffer,string,size);	
+//     printf("'%s', length %d\n",
+//             buffer,
+//             r
+//           );
+// }
+// int main()
+// {
+//     test(19);
+//     test(10);
+//     test(1);
+//     test(0);
+//     return(0);
+// }
