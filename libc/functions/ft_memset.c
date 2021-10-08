@@ -51,11 +51,11 @@ void	*ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 
-#include <string.h>
-#include <stdio.h>
-int main()
-{
-    char data[30];
-    ft_memset(data, 'û', 10);
-    printf("%s", data);
-}
+// #include <string.h>
+// #include <stdio.h>
+// int main()
+// {
+//     char data[30];
+//     ft_memset(data, 'û', 10);
+//     printf("%s", data);
+// }
