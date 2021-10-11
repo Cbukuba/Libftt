@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 15:30:55 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/08 17:51:47 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/10/11 09:08:34 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ void	*ft_memset(void *b, int c, size_t len)
 // int main()
 // {
 //     char data[30];
-//     ft_memset(data, 'û', 10);
+//     ft_memset(data, 'B', 10);
+//     printf("%s\n", data);
+//     memset(data, 'B', 10);
 //     printf("%s", data);
 // }

@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 17:57:45 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/08 19:07:29 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/10/11 09:09:05 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strcat(char *dest, char src, size_t len)
 	int	j;
 
 	j = 0;
-	while (j < len)
+	while (j < (len - 1))
 	{
 		dest[j] = src;
 		j++;
@@ -43,10 +43,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	cmp = 0;
 	while (cmp < (len - 1))
 	{
-		if (c >= 32 && c <= 126)
-		{
-			ft_strcat(b, myitoa(c), len);
-		}
+		ft_strcat(b, myitoa(c), len);
 		cmp ++;
 	}
 	return (b);
@@ -56,7 +53,6 @@ void	ft_bzero(void *s, size_t n)
 {
 	int	i;
 
-
 	i = 0;
 	while (i < n)
 	{
@@ -65,11 +61,14 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-#include <stdio.h>
-
-int main()
-{
-	void s[20] = "Hello world";
-	ft_bzero(s, 3);
-	printf("%s", s);
-}
+// #include <stdio.h>
+// #include <string.h>
+// int main()
+// {
+// 	char s[20] = "";
+// 	ft_bzero(s, 3);
+//     printf("%s\n\n\n", s);
+//     char s2[20] = "";
+//     bzero(s2, 3);
+//     printf("%s\n", s2);
+// }
