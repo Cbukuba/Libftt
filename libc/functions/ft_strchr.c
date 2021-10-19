@@ -6,10 +6,11 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 09:16:23 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/18 11:02:33 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/10/19 13:07:17 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 
 char *ft_strchr(const char *s, int c)
 {
@@ -31,6 +32,6 @@ char *ft_strchr(const char *s, int c)
 // int main()
 // {
 // 	const char str[] = "Hello world";
-// 	int c = '\0';
-// 	printf("%s%s", strchr(str, c), ft_strchr(str, c));
+// 	int c = 'p';
+// 	printf("%s\n%s", strchr(str, c), ft_strchr(str, c));
 // }
