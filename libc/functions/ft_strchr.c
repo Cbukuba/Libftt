@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 09:16:23 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/19 13:07:17 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/10/21 15:18:13 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char *ft_strchr(const char *s, int c)
 {
-	int	i;
+	int		i;
 	char	*str;
 	char	*p;
 
@@ -32,6 +32,6 @@ char *ft_strchr(const char *s, int c)
 // int main()
 // {
 // 	const char str[] = "Hello world";
-// 	int c = 'p';
+// 	int c;
 // 	printf("%s\n%s", strchr(str, c), ft_strchr(str, c));
 // }
