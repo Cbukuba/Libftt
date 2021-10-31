@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 22:23:28 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/27 00:24:47 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/10/31 22:26:00 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ int	ft_lng(int size,char **strng,char *del)
 	return (lng);
 }
 
+#include <stdio.h>
 char	*ft_strjoin(const char **strs,const char *sep)
 {
 	int		i;
@@ -66,11 +67,8 @@ char	*ft_strjoin(const char **strs,const char *sep)
 
 	strng = (char **)strs;
 	del = (char *)sep;
-	i = 0;
-	size = 0;
-	while (strs[size ++][i])
-		i ++;
-	size ++;
+	size = sizeof(strs) / sizeof(*strs);
+	printf("%d\n", size);
 	if (size == 0)
 	{
 		str = malloc(sizeof(char));
@@ -92,19 +90,15 @@ char	*ft_strjoin(const char **strs,const char *sep)
 	return (str);
 }
 
-#include <stdio.h>
 
 int    main(void)
 {
-    const char    *array[] = {"U", "N", "I", "S"};
-    int        size = 0;
+    const char    *array[] = {"H", "E", "L", "L", "O", "\0"};
     const char    *del = "-";
+	int        size = sizeof(array) / sizeof(*array);
     char    *ret;
 	int		i = 0;
 
-	while (array[size ++][i])
-		i ++;
-	size ++;
 	printf("%d\n", size);
     ret = ft_strjoin(array, del);
     if (!ret)
