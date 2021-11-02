@@ -6,13 +6,13 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 22:23:28 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/01 00:27:33 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/02 09:44:15 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, const char *src)
 {
 	int	i;
 	int	j;
@@ -40,7 +40,7 @@ size_t	ft_strlen(const char *str)
 	return (c);
 }
 
-int	ft_lng(int size,char **strng,char *del)
+int	ft_lng(int size, const char **strng, const char *del)
 {
 	int	i;
 	int	lng;
@@ -56,16 +56,26 @@ int	ft_lng(int size,char **strng,char *del)
 	return (lng);
 }
 
-char	*ft_strjoin(const char **strs,const char *sep)
+char	*link(char *str, const char **strs, const char *sep, int size)
 {
 	int		i;
+
+	i = 0;
+	while (i < size)
+	{
+		ft_strcat(str, strs[i]);
+		if (i < size - 1)
+			ft_strcat(str, sep);
+		i ++;
+	}
+	return (str);
+}
+
+char	*ft_strjoin(const char **strs, const char *sep)
+{
 	char	*str;
 	int		size;
-	char	**strng;
-	char	*del;
 
-	strng = (char **)strs;
-	del = (char *)sep;
 	size = 0;
 	while (strs[size][0])
 		size ++;
@@ -75,18 +85,10 @@ char	*ft_strjoin(const char **strs,const char *sep)
 		*str = 0;
 		return (0);
 	}
-	str = malloc(sizeof(char) * ft_lng(size, strng, del));
+	str = malloc(sizeof(char) * ft_lng(size, strs, sep));
 	if (!str)
 		return (0);
-	*str = 0;
-	i = 0;
-	while (i < size)
-	{
-		ft_strcat(str, strng[i]);
-		if (i < size - 1)
-			ft_strcat(str, del);
-		i ++;
-	}
+	link(str, strs, sep, size);
 	return (str);
 }
 
@@ -99,7 +101,6 @@ char	*ft_strjoin(const char **strs,const char *sep)
 //     char    *ret;
 // 	int		i = 0;
 
-// 	printf("%d\n", size);
 //     ret = ft_strjoin(array, del);
 //     if (!ret)
 //         printf("NULL!!\n");

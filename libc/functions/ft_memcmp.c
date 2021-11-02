@@ -6,11 +6,12 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:39:16 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/21 15:49:26 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/02 09:54:28 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	int			i;
@@ -20,11 +21,17 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	str1 = (const char *)s1;
 	str2 = (const char *)s2;
-	while (str1[i] != '\0' && str2[i] != '\0' && (str1[i] == str2[i]) && i < n - 1 )
+	while (str1[i] != '\0' && str2[i] != '\0'
+		&& (str1[i] == str2[i]) && i < n - 1 )
 		i++;
 	if (n <= 0)
 		return (0);
-	return (str1[i] - str2[i]);
+	else if ((str1[i] - str2[i]) == 0)
+		return (0);
+	else if ((str1[i] - str2[i]) > 0)
+		return (1);
+	else
+		return (-1);
 }
 
 // #include <string.h>
