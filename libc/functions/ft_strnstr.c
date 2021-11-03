@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:52:11 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/21 16:16:08 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/02 09:56:06 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@
 // }
 
 #include <stdlib.h>
+
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
 	int		i;
@@ -75,5 +76,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 // {
 // 	char str[] = "Hello world ca dit quoi?";
 // 	char c [] = "dit";
-// 	printf("%s\n%s", strnstr(str, c, strlen(str)), ft_strnstr(str, c, strlen(str)));
+// 	printf("%s\n%s", strnstr(str, c, strlen(str)), 
+// 	ft_strnstr(str, c, strlen(str)));
 // }

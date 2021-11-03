@@ -6,13 +6,13 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 09:16:23 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/21 15:18:13 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/02 09:54:55 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int		i;
 	char	*str;
