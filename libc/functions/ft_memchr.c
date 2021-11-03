@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 14:17:28 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/21 15:16:53 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/10/21 15:29:38 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
-	char	*str;
-	void	*rvalue;
+	size_t			i;
+	unsigned char	*str;
+	void			*rvalue;
 
 	rvalue = (void *)s;
-	str = (char *)s;
+	str = (unsigned char *)s;
 	i = 0;
 	while (str[i] != c && str[i] && i < (n - 1))
 		i++;
