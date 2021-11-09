@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:51:21 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/09 01:40:27 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/09 21:52:42 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,23 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (str);
 }
 
+char	*ft_strrchr(const char *s, int c)
+{
+	int		i;
+	char	*str;
+	char	*p;
+
+	str = (char *)s;
+	i = 0;
+	while (str[i])
+		i ++;
+	while (str[i] != c && i >= 0)
+		i --;
+	if (str[i] == c)
+		return (str + i + 1);
+	return (NULL);
+}
+
 char	*ft_strchr(const char *s, int c)
 {
 	int		i;
@@ -66,7 +83,7 @@ char	*ft_strchr(const char *s, int c)
 	while (str[i] != c && str[i])
 		i++;
 	if (str[i] == c)
-		return (str + i);
+		return (str + i + 1);
 	return (NULL);
 }
 
@@ -94,15 +111,18 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (i ++ <= j)
 	{
-		tab[i] = malloc(sizeof(char) * (ft_strlen(s)));
 		l = 0;
-		while (s[k] != c && *s)
+		while (s[k] != c)
 		{
 			k ++;
 			l ++;
 		}
-		// printf("k = %d\n\tl = %d\n", k, l);
-		ft_strcpy(tab[i], ft_substr(s, k, l));
+		tab[i] = malloc(sizeof(char) * l);
+		printf("k = %d\n\tl = %d\n", k, l);
+		if (i == j + 1)
+			ft_strcpy(tab[i], ft_strrchr(s, c));
+		else
+			ft_strcpy(tab[i], ft_substr(s, k, l));
 		k ++;
 	}
 	free (tab);
