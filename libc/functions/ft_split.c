@@ -6,135 +6,84 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:51:21 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/09 21:52:42 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/12 18:15:50 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stddef.h>
-#include <stdio.h>
 
-size_t	ft_strlen(const char *str)
+int	word_count(char const *s, char c, int start)
 {
-	int	c;
+	int	j;
 
-	c = 0;
-	while (str[c] != '\0')
-		c ++;
-	return (c);
+	j = 0;
+	while (s[start])
+	{
+		if (s[start] == c)
+			j ++;
+		start ++;
+	}
+	return (j);
 }
 
-char	*ft_strcpy(char *dest, char const *src)
+char	**make_tab(char **tab, char const *s, char c, int word_num)
 {
 	int	i;
+	int	j;
+	int	k;
+	int	l;
 
 	i = 0;
-	while (src[i] != '\0')
+	k = 0;
+	while (s[i] != '\0' && k <= word_num)
 	{
-		dest[i] = src [i];
-		i ++;
+		j = 0;
+		l = word_count(s, c, i);
+		tab[k] = malloc(sizeof(char) * (l + 1));
+		if (!tab)
+			return (NULL);
+		while (s[i] && s[i] == c)
+			i ++;
+		while (s[i] && s[i] != c)
+			tab[k][j++] = s[i++];
+		tab[k][j] = '\0';
+		k ++;
 	}
-	dest[i] = '\0';
-	return (dest);
-}
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	int		i;
-	char	*str;
-
-	i = 0;
-	str = malloc(sizeof(char) * len);
-	if (!str)
-		return (NULL);
-	while (i <= len)
-	{
-		str[i] = s[start + i];
-		i ++;
-	}
-	return (str);
-}
-
-char	*ft_strrchr(const char *s, int c)
-{
-	int		i;
-	char	*str;
-	char	*p;
-
-	str = (char *)s;
-	i = 0;
-	while (str[i])
-		i ++;
-	while (str[i] != c && i >= 0)
-		i --;
-	if (str[i] == c)
-		return (str + i + 1);
-	return (NULL);
-}
-
-char	*ft_strchr(const char *s, int c)
-{
-	int		i;
-	char	*str;
-	char	*p;
-
-	str = (char *)s;
-	i = 0;
-	while (str[i] != c && str[i])
-		i++;
-	if (str[i] == c)
-		return (str + i + 1);
-	return (NULL);
+	return (tab);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		j;
-	int		k;
-	int		l;
 	char	**tab;
 
-	i = 0;
-	j = 0;
-	while (s[i] != '\0')
-	{		
-		if (s[i] == c)
-			j ++;
-		i ++;
-	}
-	j ++;
-	i = 0;
-	k = 0;
-	tab = malloc(sizeof(char *) * j);
+	tab = malloc(sizeof(char *) * (word_count(s, c, 0) + 1));
 	if (!tab)
 		return (NULL);
-	while (i ++ <= j)
-	{
-		l = 0;
-		while (s[k] != c)
-		{
-			k ++;
-			l ++;
-		}
-		tab[i] = malloc(sizeof(char) * l);
-		printf("k = %d\n\tl = %d\n", k, l);
-		if (i == j + 1)
-			ft_strcpy(tab[i], ft_strrchr(s, c));
-		else
-			ft_strcpy(tab[i], ft_substr(s, k, l));
-		k ++;
-	}
-	free (tab);
+	make_tab(tab, s, c, word_count(s, c, 0));
 	return (tab);
 }
 
-int main()
-{
-	char const	*str = "Wassup-Youtube-Maadou-Gangseuleu";
-	char	del = '-';
-	char **tab = ft_split(str, del);
-	int i = 1;
-	while (i ++ <= 4)
-		printf("%s\n", tab[i]);
-}
+// #include <stdio.h>
+// int main()
+// {
+// 	char const	*str = "Wassup-Youtube-Maadou-Gangseuleu";
+// 	char	del = '-';
+// 	char **tab = ft_split(str, del);
+// 	int i = 0;
+//     int j = 0;
+//     int k = 0;
+
+//     while (str[j])
+//     {
+//         if (str[j] == del)
+//             k ++;
+//         j ++;
+//     }
+// 	while (i <= k)
+//     {
+// 		printf("%s\n", tab[i]);
+//         i ++;
+//     }
+// 	free (tab);
+// }
