@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:51:21 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/12 18:15:50 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/13 00:05:52 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	make_tab(tab, s, c, word_count(s, c, 0));
 	return (tab);
+	free (tab);
 }
 
 // #include <stdio.h>
@@ -85,5 +86,4 @@ char	**ft_split(char const *s, char c)
 // 		printf("%s\n", tab[i]);
 //         i ++;
 //     }
-// 	free (tab);
 // }
