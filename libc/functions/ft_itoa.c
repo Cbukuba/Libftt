@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 00:03:37 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 12:56:44 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/15 14:04:34 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 #include <stddef.h>
 #include "libft.h"
 
-static	char	*rev_string(char *str)
+static	char	*rev_string(char *str, int size)
 {
 	int	i;
 	int	y;
-	int	size;
 
-	size = ft_strlen(str) - 1;
 	i = 0;
 	while (i < size)
 	{
@@ -85,7 +83,7 @@ char	*ft_itoa(int n)
 		return (NULL);
 	convert(n, str);
 	str[len + 1] = '\0';
-	rev_string(str);
+	rev_string(str, len - 1);
 	return (str);
 }
 
