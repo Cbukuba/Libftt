@@ -6,20 +6,21 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 10:22:29 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 12:57:32 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/15 16:17:22 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	int		y;
 	char	*new_dst;
 	char	*new_src;
 	char	*buffer_temp;
 
+	buffer_temp = NULL;
 	new_dst = (char *)dst;
 	new_src = (char *)src;
 	if (new_src > new_dst)

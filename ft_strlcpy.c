@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 15:51:59 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 12:59:29 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/15 16:18:44 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 size_t	ft_strlcpy(char *dst,
 					const char *src, size_t dstsize )
 {
-	int	i;
-	int	lng;
+	size_t	i;
+	size_t	lng;
 
 	if (dstsize > 0)
 	{

@@ -6,11 +6,11 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 12:48:57 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 12:55:06 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/15 15:29:58 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lbft.h"
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

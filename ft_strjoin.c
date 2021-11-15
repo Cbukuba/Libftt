@@ -6,12 +6,12 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 22:23:28 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 12:42:03 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/15 15:33:34 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libf.h"
+#include "libft.h"
 
 static	char	*ft_strcat(char *dest, const char *src)
 {

@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:52:11 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/02 09:56:06 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/15 16:19:11 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
-	int		i;
-	int		j;
+	size_t		i;
+	size_t		j;
 	char	*str;
 	char	*to_find;
 

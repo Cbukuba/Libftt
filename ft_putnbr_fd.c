@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 15:09:18 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 12:54:53 by cbukuba          ###   ########.fr       */
+/*   Created: 2021/11/15 11:00:13 by cbukuba           #+#    #+#             */
+/*   Updated: 2021/11/15 15:32:25 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
-#include <limits.h>
+#include <unistd.h>
+#include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	ft_putnbr_fd(int n, int fd)
 {
-	void	*ptr;
-
-	ptr = 0;
-	if (nmemb == 0 || size == 0)
-		return (NULL);
-	else if ((nmemb * size) > INT_MAX || (nmemb * size) < INT_MIN)
-		return (NULL);
-	ptr = (int *)malloc(nmemb * size);
-	return (ptr);
+	if (n == -2147483648)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		n = 147483648;
+	}
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n = n * (-1 );
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else
+		ft_putchar_fd(n + '0', fd);
 }
