@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 10:00:04 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 16:20:58 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/15 16:23:25 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t		i;
-	char	*str;
+	char		*str;
 
 	i = 0;
 	str = malloc(sizeof(char) * (len + 1));

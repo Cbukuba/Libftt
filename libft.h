@@ -6,13 +6,14 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 13:25:59 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 15:35:17 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/15 16:23:36 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-#include <stdlib.h>
+# include <stdlib.h>
+
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_isalnum(int c);
