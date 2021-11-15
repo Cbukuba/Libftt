@@ -6,11 +6,10 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 10:22:29 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/18 08:43:58 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/15 12:57:32 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//libft.h "ft_memcpy"
 #include <string.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
@@ -28,7 +27,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		*new_dst = *buffer_temp;
 		*buffer_temp = *new_src;
 	}
-	memcpy (dst, src, len);
+	ft_memcpy (dst, src, len);
 	return (dst);
 }
 

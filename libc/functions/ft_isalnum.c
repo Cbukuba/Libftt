@@ -6,25 +6,11 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 12:48:57 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/02 13:07:06 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/15 12:55:06 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
-{
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
-}
-
-int	ft_isdigit(int c)
-{
-	if (c >= 48 && c <= 57)
-		return (1);
-	else
-		return (0);
-}
+#include "lbft.h"
 
 int	ft_isalnum(int c)
 {

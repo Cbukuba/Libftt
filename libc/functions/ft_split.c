@@ -6,14 +6,14 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:51:21 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/13 00:05:52 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/15 12:58:45 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stddef.h>
 
-int	word_count(char const *s, char c, int start)
+static	int	word_count(char const *s, char c, int start)
 {
 	int	j;
 
@@ -27,7 +27,7 @@ int	word_count(char const *s, char c, int start)
 	return (j);
 }
 
-char	**make_tab(char **tab, char const *s, char c, int word_num)
+static	char	**make_tab(char **tab, char const *s, char c, int word_num)
 {
 	int	i;
 	int	j;

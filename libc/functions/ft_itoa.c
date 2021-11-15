@@ -6,26 +6,15 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 00:03:37 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 09:50:49 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/15 12:56:44 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stddef.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *str)
-{
-	int	c;
-
-	c = 0;
-	while (str[c] != '\0')
-	{
-		c ++;
-	}
-	return (c);
-}
-
-char	*rev_string(char *str)
+static	char	*rev_string(char *str)
 {
 	int	i;
 	int	y;
@@ -44,7 +33,7 @@ char	*rev_string(char *str)
 	return (str);
 }
 
-int	intlen(int n)
+static	int	intlen(int n)
 {
 	int	i;
 
@@ -59,7 +48,7 @@ int	intlen(int n)
 	return (i);
 }
 
-char	*convert(int n, char *str)
+static	char	*convert(int n, char *str)
 {
 	int	res;
 	int	i;

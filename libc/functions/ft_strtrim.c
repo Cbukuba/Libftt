@@ -6,22 +6,13 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 11:23:32 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/02 14:53:49 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/15 12:49:11 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stddef.h>
-
-size_t	ft_strlen(const char *str)
-{
-	int	c;
-
-	c = 0;
-	while (str[c] != '\0')
-		c ++;
-	return (c);
-}
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

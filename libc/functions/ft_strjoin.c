@@ -6,13 +6,14 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 22:23:28 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/02 09:44:15 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/15 12:42:03 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libf.h"
 
-char	*ft_strcat(char *dest, const char *src)
+static	char	*ft_strcat(char *dest, const char *src)
 {
 	int	i;
 	int	j;
@@ -30,17 +31,7 @@ char	*ft_strcat(char *dest, const char *src)
 	return (dest);
 }
 
-size_t	ft_strlen(const char *str)
-{
-	int	c;
-
-	c = 0;
-	while (str[c] != '\0')
-		c ++;
-	return (c);
-}
-
-int	ft_lng(int size, const char **strng, const char *del)
+static	int	ft_lng(int size, const char **strng, const char *del)
 {
 	int	i;
 	int	lng;
@@ -56,7 +47,7 @@ int	ft_lng(int size, const char **strng, const char *del)
 	return (lng);
 }
 
-char	*link(char *str, const char **strs, const char *sep, int size)
+static	char	*link(char *str, const char **strs, const char *sep, int size)
 {
 	int		i;
 

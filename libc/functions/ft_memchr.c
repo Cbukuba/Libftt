@@ -6,11 +6,10 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 14:17:28 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/10/21 15:29:38 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/15 12:57:04 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// libft.h
 #include <stdlib.h>
 #include <stddef.h>
 

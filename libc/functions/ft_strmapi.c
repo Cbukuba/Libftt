@@ -6,24 +6,13 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 09:53:53 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 10:36:56 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/15 12:47:02 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stddef.h>
-
-size_t	ft_strlen(const char *str)
-{
-	int	c;
-
-	c = 0;
-	while (str[c] != '\0')
-	{
-		c ++;
-	}
-	return (c);
-}
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
