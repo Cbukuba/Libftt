@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 10:07:25 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 13:25:56 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 19:19:41 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,25 +18,19 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	j;
 	size_t	cmp;
 
-	cmp = 0;
-	while (src[cmp])
-		cmp ++;
-	if (dstsize > 0)
+	cmp = ft_strlen(src);
+	i = ft_strlen(dst);
+	j = 0;
+	if (dstsize == 0)
+		return (cmp);
+	while (src[j] != '\0' && (i + j) < dstsize - 1)
 	{
-		i = 0;
-		while (dst[i] != '\0')
-			i ++;
-		j = 0;
-		while (src[j] != '\0' && i < dstsize - 1)
-		{
-			dst[i] = src[j];
-			i ++;
-			j ++;
-		}
-		dst[i] = '\0';
+		dst[i + j] = src[j];
+		j ++;
 	}
-	if (dstsize == cmp)
-		return (dstsize);
+	dst[i + j] = '\0';
+	if (dstsize > i)
+		return (i + cmp);
 	return (cmp + dstsize);
 }
 
