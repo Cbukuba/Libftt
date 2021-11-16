@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 22:23:28 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 14:58:47 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 20:42:22 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,9 @@ char	*ft_strjoin(char const *s1,char const *s2)
 
 	str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!str)
+		return (0);
+	// ajt hier
+	if (s1 == NULL || s2 == NULL)
 		return (0);
 	str_link(str, s1, s2);
 	return (str);
