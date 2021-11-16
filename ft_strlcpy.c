@@ -6,11 +6,11 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 15:51:59 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 16:18:44 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 13:25:48 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst,
 					const char *src, size_t dstsize )

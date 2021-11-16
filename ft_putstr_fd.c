@@ -6,11 +6,10 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 10:49:20 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 10:59:11 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 13:27:09 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)

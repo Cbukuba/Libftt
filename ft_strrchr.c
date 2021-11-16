@@ -6,11 +6,11 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 11:05:20 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 16:19:21 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 13:24:41 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

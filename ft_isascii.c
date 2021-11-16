@@ -6,13 +6,15 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 13:31:27 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 12:55:24 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 17:31:52 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isascii(int c)
 {
-	if (c <= 0 && c >= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);

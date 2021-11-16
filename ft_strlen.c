@@ -6,11 +6,11 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 14:15:30 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 13:50:42 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 13:25:40 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

@@ -6,12 +6,10 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 09:53:53 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 15:35:38 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 13:25:35 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

@@ -6,12 +6,11 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:51:21 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 12:58:45 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 16:03:27 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
+#include "libft.h"
 
 static	int	word_count(char const *s, char c, int start)
 {
@@ -50,19 +49,21 @@ static	char	**make_tab(char **tab, char const *s, char c, int word_num)
 		tab[k][j] = '\0';
 		k ++;
 	}
+	tab[k] = 0;
 	return (tab);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
+	int		i;
 
+	i = 0;
 	tab = malloc(sizeof(char *) * (word_count(s, c, 0) + 1));
-	if (!tab)
+	if (!tab || !s)
 		return (NULL);
 	make_tab(tab, s, c, word_count(s, c, 0));
 	return (tab);
-	free (tab);
 }
 
 // #include <stdio.h>

@@ -6,9 +6,11 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 09:07:54 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/02 09:07:07 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 13:24:11 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

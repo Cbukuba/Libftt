@@ -6,12 +6,10 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 11:23:32 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 12:49:11 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 13:24:16 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)

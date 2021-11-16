@@ -6,11 +6,10 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 11:00:13 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 15:32:25 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 13:27:06 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)

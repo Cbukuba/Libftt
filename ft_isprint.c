@@ -6,13 +6,15 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/02 13:13:35 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 12:55:42 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 17:34:33 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 127)
+	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);

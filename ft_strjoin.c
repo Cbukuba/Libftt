@@ -6,11 +6,10 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 22:23:28 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 15:33:34 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 14:58:47 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static	char	*ft_strcat(char *dest, const char *src)
@@ -31,7 +30,7 @@ static	char	*ft_strcat(char *dest, const char *src)
 	return (dest);
 }
 
-static	int	ft_lng(int size, const char **strng, const char *del)
+static	int	ft_lng(int size, const char *strng, const char *del)
 {
 	int	i;
 	int	lng;
@@ -40,46 +39,28 @@ static	int	ft_lng(int size, const char **strng, const char *del)
 	lng = 0;
 	while (i < size)
 	{
-		lng += ft_strlen(strng[i]);
+		lng += ft_strlen(strng);
 		i ++;
 	}
 	lng += (size - 1) * ft_strlen(del) + 1;
 	return (lng);
 }
 
-static	char	*link(char *str, const char **strs, const char *sep, int size)
+static	char	*str_link(char *str,  char const *s1,  char const *s2)
 {
-	int		i;
-
-	i = 0;
-	while (i < size)
-	{
-		ft_strcat(str, strs[i]);
-		if (i < size - 1)
-			ft_strcat(str, sep);
-		i ++;
-	}
+	ft_strcat(str, s1);
+	ft_strcat(str, s2);
 	return (str);
 }
 
-char	*ft_strjoin(const char **strs, const char *sep)
+char	*ft_strjoin(char const *s1,char const *s2)
 {
 	char	*str;
-	int		size;
 
-	size = 0;
-	while (strs[size][0])
-		size ++;
-	if (size == 0)
-	{
-		str = malloc(sizeof(char));
-		*str = 0;
-		return (0);
-	}
-	str = malloc(sizeof(char) * ft_lng(size, strs, sep));
+	str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (!str)
 		return (0);
-	link(str, strs, sep, size);
+	str_link(str, s1, s2);
 	return (str);
 }
 
@@ -90,7 +71,6 @@ char	*ft_strjoin(const char **strs, const char *sep)
 //     const char    *del = "-";
 // 	int        size = sizeof(array) / sizeof(*array);
 //     char    *ret;
-// 	int		i = 0;
 
 //     ret = ft_strjoin(array, del);
 //     if (!ret)

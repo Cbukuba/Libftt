@@ -6,12 +6,10 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 00:03:37 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 14:04:34 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 13:28:37 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
 #include "libft.h"
 
 static	char	*rev_string(char *str, int size)

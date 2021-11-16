@@ -6,20 +6,17 @@
 #    By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/15 14:26:11 by cbukuba           #+#    #+#              #
-#    Updated: 2021/11/16 11:03:09 by cbukuba          ###   ########.fr        #
+#    Updated: 2021/11/16 14:39:56 by cbukuba          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-CC = gcc
-FLAGS = -Wall -Wextra -Werror
-NAME = libft.a
 SRC = 	ft_atoi.c \
 		ft_bzero.c \
-		ft_calloc.c \
-		ft_isalnum.c \
-		ft_isalpha.c \
-		ft_isascii.c \
+ 		ft_calloc.c \
+ 		ft_isalnum.c \
+ 		ft_isalpha.c \
+ 		ft_isascii.c \
 		ft_isdigit.c \
 		ft_isprint.c \
 		ft_itoa.c \
@@ -49,15 +46,16 @@ SRC = 	ft_atoi.c \
 		ft_tolower.c \
 		ft_toupper.c 
 
-OBJ = $(SRC : .c= .o)
+OBJ = $(SRC:.c=.o)	
+
+CC = gcc
+FLAGS = -Wall -Wextra -Werror
+NAME = libft.a
 
 all : $(NAME)
 
-$(NAME) :
-	$(CC) $(FLAGS) -o $(NAME) $(SRC)
-
-%.o : %.c
-	$(CC) $(FLAGS) -o $(OBJ) $(SRC)
+$(NAME):		$(OBJ)
+					ar rcs $(NAME) $(OBJ) 
 
 clean :
 	rm -f *.o 

@@ -6,11 +6,11 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 17:16:46 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 12:50:42 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 13:29:53 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

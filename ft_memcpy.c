@@ -6,27 +6,29 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 09:17:51 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 12:57:24 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 16:16:57 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t	i;
-	char	*new_dst;
-	char	*new_src;
+	size_t			i;
+	unsigned char	*new_dst;
+	unsigned char	*new_src;
 
-	new_dst = (char *)dst;
-	new_src = (char *)src;
+	if(!dst || !src)
+		return (NULL);
+	new_dst = (unsigned char *)dst;
+	new_src = (unsigned char *)src;
 	i = 0;
-	while (new_src[i] && i < n)
+	while (i < n)
 	{
 		new_dst[i] = new_src[i];
 		i ++;
 	}
-	new_dst[i] = '\0';
+	dst = (void *)new_dst;
 	return (dst);
 }
 

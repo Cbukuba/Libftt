@@ -6,11 +6,11 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 15:30:55 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/15 12:57:46 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 14:33:28 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static	char	*ft_strcat(char *dest, char src, size_t len)
 {
@@ -29,14 +29,15 @@ static	char	*ft_strcat(char *dest, char src, size_t len)
 void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	cmp;
+	unsigned char	*p;
 
+	if (!b)
+		return (NULL);
+	p = (unsigned char *)b;
 	cmp = 0;
-	while (cmp < (len - 1))
+	while (cmp < len)
 	{
-		if (c >= 32 && c <= 126)
-		{
-			ft_strcat(b, c, len);
-		}
+		p[cmp] = (unsigned char)c;
 		cmp ++;
 	}
 	return (b);
