@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 09:16:23 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 18:21:03 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 20:47:29 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 
 	str = (char *)s;
 	i = 0;
-	while ( str[i] != (char)c && str[i])
+	while (str[i] != (char)c && str[i])
 		i++;
 	if (str[i] == c || ((c - 256) > 0))
 		return (str + i);

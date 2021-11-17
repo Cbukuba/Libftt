@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 14:17:28 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 17:17:44 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 20:44:28 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,9 +79,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 // 		printf("%s %p\n", ft_memchr(s, 8, 20), ft_memchr(s, 8, 20));
 
 // 		printf("\nft_memchr not ok\n");
-// 	}
-
-	
+// 	}	
 // 	// printf("%s %p\n", ft_memchr(NULL, '\0', 20), ft_memchr(NULL, '\0', 20));
 // 	return (0);
 // }

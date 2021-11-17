@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 15:30:55 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 14:33:28 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 20:46:15 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static	char	*ft_strcat(char *dest, char src, size_t len)
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t	cmp;
+	size_t			cmp;
 	unsigned char	*p;
 
 	if (!b)

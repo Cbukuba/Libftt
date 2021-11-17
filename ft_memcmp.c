@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:39:16 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 17:28:53 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/16 20:44:42 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t			i;
+	size_t					i;
 	const unsigned char		*str1;
 	const unsigned char		*str2;
 
