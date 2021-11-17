@@ -6,25 +6,11 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 15:30:55 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 20:46:15 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/17 11:47:49 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static	char	*ft_strcat(char *dest, char src, size_t len)
-{
-	size_t	j;
-
-	j = 0;
-	while (j < len)
-	{
-		dest[j] = src;
-		j++;
-	}
-	dest[j] = '\0';
-	return (dest);
-}
 
 void	*ft_memset(void *b, int c, size_t len)
 {

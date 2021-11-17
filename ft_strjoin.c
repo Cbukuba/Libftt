@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 22:23:28 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 20:42:22 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/17 12:37:28 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,44 +26,42 @@ static	char	*ft_strcat(char *dest, const char *src)
 		dest[i + j] = src[j];
 		j++;
 	}
-	dest[i + j] = '\0';
 	return (dest);
 }
 
-static	int	ft_lng(int size, const char *strng, const char *del)
+static char	*str_link(char *str, char const *s1, char const *s2, int lng1, int lng2)
 {
 	int	i;
-	int	lng;
-
+	
 	i = 0;
-	lng = 0;
-	while (i < size)
+	if (lng1 == 0 && lng2 == 0)
+		*str = 0;
+	else
 	{
-		lng += ft_strlen(strng);
-		i ++;
+		ft_strcat(str, s1);
+		while (i < lng2)
+		{
+			str[lng1] = s2[i];
+			lng1 ++;
+			i ++;
+		}
+		str[lng1] = '\0';
 	}
-	lng += (size - 1) * ft_strlen(del) + 1;
-	return (lng);
-}
-
-static	char	*str_link(char *str,  char const *s1,  char const *s2)
-{
-	ft_strcat(str, s1);
-	ft_strcat(str, s2);
 	return (str);
 }
 
 char	*ft_strjoin(char const *s1,char const *s2)
 {
 	char	*str;
+	int		lng1;
+	int		lng2;
 
-	str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	lng1 = ft_strlen(s1);
+	lng2 = ft_strlen(s2);
+	str = malloc(sizeof(char) * (lng1 + lng2 + 1));
 	if (!str)
 		return (0);
-	// ajt hier
-	if (s1 == NULL || s2 == NULL)
-		return (0);
-	str_link(str, s1, s2);
+	str_link(str, s1, s2, lng1, lng2);
 	return (str);
 }
 
