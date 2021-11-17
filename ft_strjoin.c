@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 22:23:28 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/17 12:37:28 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/17 17:06:51 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,14 @@ static	char	*ft_strcat(char *dest, const char *src)
 	return (dest);
 }
 
-static char	*str_link(char *str, char const *s1, char const *s2, int lng1, int lng2)
+static char	*str_link(char *str, char const *s1, char const *s2)
 {
 	int	i;
-	
+	int	lng1;
+	int	lng2;
+
+	lng1 = ft_strlen(s1);
+	lng2 = ft_strlen(s2);
 	i = 0;
 	if (lng1 == 0 && lng2 == 0)
 		*str = 0;
@@ -50,7 +54,7 @@ static char	*str_link(char *str, char const *s1, char const *s2, int lng1, int l
 	return (str);
 }
 
-char	*ft_strjoin(char const *s1,char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 	int		lng1;
@@ -61,7 +65,7 @@ char	*ft_strjoin(char const *s1,char const *s2)
 	str = malloc(sizeof(char) * (lng1 + lng2 + 1));
 	if (!str)
 		return (0);
-	str_link(str, s1, s2, lng1, lng2);
+	str_link(str, s1, s2);
 	return (str);
 }
 
