@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
+/*   By: cbukuba <cbukuba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 11:23:32 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/18 09:52:58 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/18 14:18:14 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 	int		start;
 	int		len;
-	
+
 	start = 0;
 	while (find_in_set(s1[start], set) && s1[start])
 		start ++;

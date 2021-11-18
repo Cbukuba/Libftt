@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
+/*   By: cbukuba <cbukuba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:51:21 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/18 10:38:32 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/18 12:44:42 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static	int	word_count(char const *s, char c, int start)
 	j = 0;
 	while (s[start])
 	{
-		if (s[start] == c)
+		if (s[start] == c && s[start + 1] != c)
 			j ++;
 		start ++;
 	}
@@ -34,6 +34,7 @@ static	int	word_count(char const *s, char c, int start)
 	return (j);
 }
 
+#include <stdio.h>
 static	char	**make_tab(char **tab, char const *s, char c, int word_num)
 {
 	int	i;
@@ -67,6 +68,7 @@ char	**ft_split(char const *s, char c)
 	int		i;
 
 	i = 0;
+	// printf("%d\n", word_count(s, c, 0));
 	tab = malloc(sizeof(char *) * (word_count(s, c, 0) + 1));
 	if (!tab)
 		return (NULL);
@@ -74,10 +76,9 @@ char	**ft_split(char const *s, char c)
 	return (tab);
 }
 
-// #include <stdio.h>
 // int main()
 // {
-// 	char const	*str = "Tripouille " ;
+// 	char const	*str = "Tripouille ";
 // 	char	del = ' ';
 // 	char **tab = ft_split(str , del);
 // 	int i = 0;

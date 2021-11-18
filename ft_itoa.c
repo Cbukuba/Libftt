@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
+/*   By: cbukuba <cbukuba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/13 00:03:37 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 13:28:37 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/18 14:16:44 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static	int	intlen(int n)
 	i = 0;
 	if (n < 0)
 		i ++;
-	while (n != 0)
+	while (n)
 	{
 		n /= 10;
 		i ++;
@@ -57,7 +57,7 @@ static	char	*convert(int n, char *str)
 		n = -n;
 		j = 1;
 	}
-	while (n != 0)
+	while (n)
 	{
 		res = n % 10;
 		if (res >= 10)
@@ -75,12 +75,18 @@ char	*ft_itoa(int n)
 	char	*str;
 	int		len;
 
+	if (n == INT_MIN)
+		return (ft_strdup("-2147483648"));
+	else if (n == 0)
+		return (ft_strdup("0"));
+	else if (n == 2147483647)
+		return (ft_strdup("2147483647"));
 	len = intlen(n);
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
 	convert(n, str);
-	str[len + 1] = '\0';
+	str[len] = '\0';
 	rev_string(str, len - 1);
 	return (str);
 }
@@ -89,5 +95,5 @@ char	*ft_itoa(int n)
 
 // int	main()
 // {
-// 	printf("%s\n", ft_itoa(-34245));
+// 	printf("%s\n", ft_itoa(-2147483648));
 // }
