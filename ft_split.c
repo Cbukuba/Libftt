@@ -6,35 +6,48 @@
 /*   By: cbukuba <cbukuba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:51:21 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/18 12:44:42 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/18 19:20:53 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	word_count(char const *s, char c, int start)
+static	int	word_count(char const *s, char c)
 {
-	int	j;
 	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
-	while (s[start])
-	{
-		if (s[start] == c && s[start + 1] != c)
-			j ++;
-		start ++;
-	}
 	while (s[i])
 	{
-		if (c == ' ' && s[i] == c)
+		if (s[i] == c)
+			i ++;
+		else
+		{
 			j ++;
-		i ++;
+			while (s[i] && s[i] != c)
+				i ++;
+		}
 	}
 	return (j);
 }
 
-#include <stdio.h>
+static int	word_len(char const *s, char c, int i)
+{
+	int	len;
+
+	len = 0;
+	while (s[i] && s[i] == c)
+		i ++;
+	while (s[i] && s[i] != c)
+	{
+		i ++;
+		len ++;
+	}
+	return (len);
+}
+
 static	char	**make_tab(char **tab, char const *s, char c, int word_num)
 {
 	int	i;
@@ -44,10 +57,10 @@ static	char	**make_tab(char **tab, char const *s, char c, int word_num)
 
 	i = 0;
 	k = 0;
-	while (s[i] != '\0' && k <= word_num)
+	while (s[i] && k < word_num)
 	{
 		j = 0;
-		l = word_count(s, c, i);
+		l = word_len(s, c, i);
 		tab[k] = malloc(sizeof(char) * (l + 1));
 		if (!tab)
 			return (NULL);
@@ -66,19 +79,22 @@ char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	int		i;
+	int		len;
+	void	*b;
 
 	i = 0;
-	// printf("%d\n", word_count(s, c, 0));
-	tab = malloc(sizeof(char *) * (word_count(s, c, 0) + 1));
+	len = word_count(s, c);
+	tab = malloc(sizeof(char *) * (len + 1));
 	if (!tab)
 		return (NULL);
-	make_tab(tab, s, c, word_count(s, c, 0));
+	make_tab(tab, s, c, len);
 	return (tab);
 }
 
+// #include <stdio.h>
 // int main()
 // {
-// 	char const	*str = "Tripouille ";
+// 	char const	*str = "     ";
 // 	char	del = ' ';
 // 	char **tab = ft_split(str , del);
 // 	int i = 0;
