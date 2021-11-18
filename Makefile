@@ -6,7 +6,7 @@
 #    By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/15 14:26:11 by cbukuba           #+#    #+#              #
-#    Updated: 2021/11/16 14:39:56 by cbukuba          ###   ########.fr        #
+#    Updated: 2021/11/18 09:31:11 by cbukuba          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,6 @@ SRC = 	ft_atoi.c \
 		ft_toupper.c 
 
 OBJ = $(SRC:.c=.o)	
-
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
 NAME = libft.a

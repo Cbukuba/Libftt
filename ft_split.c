@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 14:51:21 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 16:03:27 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/18 10:38:32 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,21 @@
 static	int	word_count(char const *s, char c, int start)
 {
 	int	j;
+	int	i;
 
+	i = 0;
 	j = 0;
 	while (s[start])
 	{
 		if (s[start] == c)
 			j ++;
 		start ++;
+	}
+	while (s[i])
+	{
+		if (c == ' ' && s[i] == c)
+			j ++;
+		i ++;
 	}
 	return (j);
 }
@@ -60,7 +68,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	tab = malloc(sizeof(char *) * (word_count(s, c, 0) + 1));
-	if (!tab || !s)
+	if (!tab)
 		return (NULL);
 	make_tab(tab, s, c, word_count(s, c, 0));
 	return (tab);
@@ -69,9 +77,9 @@ char	**ft_split(char const *s, char c)
 // #include <stdio.h>
 // int main()
 // {
-// 	char const	*str = "Wassup-Youtube-Maadou-Gangseuleu";
-// 	char	del = '-';
-// 	char **tab = ft_split(str, del);
+// 	char const	*str = "Tripouille " ;
+// 	char	del = ' ';
+// 	char **tab = ft_split(str , del);
 // 	int i = 0;
 //     int j = 0;
 //     int k = 0;
