@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:37:44 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/19 18:14:47 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/19 21:32:29 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,19 @@ static int	word_len(char const *s, char c, int i)
 	return (len);
 }
 
+static	char	**free_tab(char **tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		free(tab);
+		i ++;
+	}
+	return (NULL);
+}
+
 static	char	**make_tab(char **tab, char const *s, char c, int word_num)
 {
 	int	i;
@@ -63,7 +76,7 @@ static	char	**make_tab(char **tab, char const *s, char c, int word_num)
 		l = word_len(s, c, i);
 		tab[k] = malloc(sizeof(char) * (l + 1));
 		if (!tab)
-			return (NULL);
+			free_tab (tab);
 		while (s[i] && s[i] == c)
 			i ++;
 		while (s[i] && s[i] != c)
@@ -78,17 +91,14 @@ static	char	**make_tab(char **tab, char const *s, char c, int word_num)
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
-	int		i;
 	int		len;
 
-	i = 0;
 	len = word_count(s, c);
 	tab = malloc(sizeof(char *) * (len + 1));
 	if (!tab)
 		return (NULL);
 	make_tab(tab, s, c, len);
 	return (tab);
-	free(tab);
 }
 
 // #include <stdio.h>
