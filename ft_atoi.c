@@ -5,36 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 17:16:46 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 20:08:08 by cbukuba          ###   ########.fr       */
+/*   Created: 2021/11/19 09:34:10 by cbukuba           #+#    #+#             */
+/*   Updated: 2021/11/19 09:34:29 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// int	ft_atoi(const char *str)
-// {
-// 	int	i;
-// 	int	sign;
-// 	int	ent;
-// 	int	new_ent;
-
-// 	i = 0;
-// 	sign = 1;
-// 	ent = 0;
-// 	if (str[0] == '-')
-// 	{
-// 		sign *= -1 ;
-// 		i ++;
-// 	}	
-// 	while (str[i] >= 48 && str[i] <= 57)
-// 	{
-// 		new_ent = ent * 10 + (str[i] - 48);
-// 		i ++;
-// 		ent = new_ent;
-// 	}
-// 	return (ent * sign);
-// }
 
 int	ft_atoi(char const *str)
 {

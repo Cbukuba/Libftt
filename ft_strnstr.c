@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 15:52:11 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 19:50:08 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/19 09:46:04 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(char const *haystack, char const *needle, size_t len)
 {
 	size_t		i;
 	size_t		j;

@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/18 09:16:23 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 20:47:29 by cbukuba          ###   ########.fr       */
+/*   Created: 2021/11/19 09:38:19 by cbukuba           #+#    #+#             */
+/*   Updated: 2021/11/19 09:38:21 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr(char const *s, int c)
 {
 	int		i;
 	char	*str;

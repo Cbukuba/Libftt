@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/02 15:51:59 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 13:25:48 by cbukuba          ###   ########.fr       */
+/*   Created: 2021/11/19 09:40:20 by cbukuba           #+#    #+#             */
+/*   Updated: 2021/11/19 09:43:54 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst,
-					const char *src, size_t dstsize )
+					char const *src, size_t dstsize )
 {
 	size_t	i;
 	size_t	lng;
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dst,
 	if (dstsize > 0)
 	{
 		i = 0;
-		while (src[i] != '\0' && i < dstsize - 1)
+		while (src[i] && i < dstsize - 1)
 		{
 			dst[i] = src[i];
 			i ++;

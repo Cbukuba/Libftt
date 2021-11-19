@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbukuba <cbukuba@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/13 00:03:37 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/18 14:16:44 by cbukuba          ###   ########.fr       */
+/*   Created: 2021/11/19 09:35:08 by cbukuba           #+#    #+#             */
+/*   Updated: 2021/11/19 09:35:12 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,6 @@ char	*ft_itoa(int n)
 		return (ft_strdup("-2147483648"));
 	else if (n == 0)
 		return (ft_strdup("0"));
-	else if (n == 2147483647)
-		return (ft_strdup("2147483647"));
 	len = intlen(n);
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cbukuba <cbukuba@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 22:23:28 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/18 11:20:29 by cbukuba          ###   ########.fr       */
+/*   Created: 2021/11/19 09:39:21 by cbukuba           #+#    #+#             */
+/*   Updated: 2021/11/19 09:39:24 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	char	*ft_strcat(char *dest, const char *src)
+static	char	*ft_strcat(char *dest, char const *src)
 {
 	int	i;
 	int	j;

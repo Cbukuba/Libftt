@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 10:07:25 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 19:19:41 by cbukuba          ###   ########.fr       */
+/*   Created: 2021/11/19 09:39:49 by cbukuba           #+#    #+#             */
+/*   Updated: 2021/11/19 09:39:52 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, char const *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	j;

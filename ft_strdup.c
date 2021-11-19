@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 15:51:02 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 13:26:16 by cbukuba          ###   ########.fr       */
+/*   Created: 2021/11/19 09:38:47 by cbukuba           #+#    #+#             */
+/*   Updated: 2021/11/19 09:38:49 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_strdup(char const *s)
 {
 	int		i;
 	int		lng;
