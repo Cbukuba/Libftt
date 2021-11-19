@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:39:21 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/19 09:39:24 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/19 12:14:17 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!str)
 		return (0);
 	str_link(str, s1, s2);
+	str[lng1 + lng2 + 1] = 0;
 	return (str);
 }
 

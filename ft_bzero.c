@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 17:57:45 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 13:29:59 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/19 12:48:40 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		ft_memset(s, '\0', n);
+		ft_memset(s, 0, n);
 		i ++;
 	}
 }

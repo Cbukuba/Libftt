@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:41:56 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/19 09:46:17 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/19 12:13:17 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (find_in_set(s1[len - 1], set) && len > start)
 		len --;
 	str = malloc(sizeof(char) * (len - start + 1));
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (start < len)
 		str[i ++] = s1[start ++];

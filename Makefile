@@ -6,7 +6,7 @@
 #    By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/15 14:26:11 by cbukuba           #+#    #+#              #
-#    Updated: 2021/11/18 09:31:11 by cbukuba          ###   ########.fr        #
+#    Updated: 2021/11/19 12:02:24 by cbukuba          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,10 @@ NAME = libft.a
 all : $(NAME)
 
 $(NAME):		$(OBJ)
-					ar rcs $(NAME) $(OBJ) 
+					ar rcs $(NAME) $(OBJ)
+
+%.o: %.c
+	$(CC) $(FLAGS) -c $< -o $@
 
 clean :
 	rm -f *.o 
