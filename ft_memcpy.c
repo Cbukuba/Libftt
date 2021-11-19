@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 09:17:51 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/19 12:31:41 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/19 13:32:04 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char	*new_dst;
 	unsigned char	*new_src;
 
+	if (!dst && !src)
+		return (NULL);
 	new_dst = (unsigned char *)dst;
 	new_src = (unsigned char *)src;
 	i = 0;

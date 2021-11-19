@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:39:21 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/19 12:14:17 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/19 14:38:01 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,19 +38,14 @@ static char	*str_link(char *str, char const *s1, char const *s2)
 	lng1 = ft_strlen(s1);
 	lng2 = ft_strlen(s2);
 	i = 0;
-	if (lng1 == 0 && lng2 == 0)
-		*str = 0;
-	else
+	ft_strcat(str, s1);
+	while (i < lng2)
 	{
-		ft_strcat(str, s1);
-		while (i < lng2)
-		{
-			str[lng1] = s2[i];
-			lng1 ++;
-			i ++;
-		}
-		str[lng1] = '\0';
+		str[lng1] = s2[i];
+		lng1 ++;
+		i ++;
 	}
+	str[lng1] = '\0';
 	return (str);
 }
 
@@ -66,7 +61,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!str)
 		return (0);
 	str_link(str, s1, s2);
-	str[lng1 + lng2 + 1] = 0;
 	return (str);
 }
 

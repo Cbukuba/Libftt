@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 11:05:20 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 18:41:30 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/19 14:42:11 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ char	*ft_strrchr(const char *s, int c)
 		i --;
 	if (str[i] == c)
 		return (str + i);
-	else if ((c - 256) > 0)
-		return (str);
 	return (NULL);
 }
 
