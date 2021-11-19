@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:38:47 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/19 09:38:49 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/20 00:06:49 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(char const *s)
 	int		lng;
 	char	*p;
 
+	if (!s)
+		return (NULL);
 	lng = 0;
 	while (s[lng] != '\0')
 		lng ++;

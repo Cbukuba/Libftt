@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:39:21 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/19 18:07:04 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/11/20 00:08:26 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		lng1;
 	int		lng2;
 
+	if (!s1 || !s2)
+		return (NULL);
 	lng1 = ft_strlen(s1);
 	lng2 = ft_strlen(s2);
 	str = malloc(sizeof(char) * (lng1 + lng2 + 1));
