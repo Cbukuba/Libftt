@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:37:44 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/19 21:32:29 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/12/12 23:36:24 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,11 @@ static	char	**free_tab(char **tab)
 	i = 0;
 	while (tab[i])
 	{
-		free(tab);
+		free(tab[i]);
 		i ++;
 	}
-	return (NULL);
+	free (tab);
+	return (tab);
 }
 
 static	char	**make_tab(char **tab, char const *s, char c, int word_num)
@@ -99,12 +100,13 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	make_tab(tab, s, c, len);
 	return (tab);
+	free(tab);
 }
 
 // #include <stdio.h>
 // int main()
 // {
-// 	char const	*str = "     ";
+// 	char const	*str = "";
 // 	char	del = ' ';
 // 	char **tab = ft_split(str , del);
 // 	int i = 0;
