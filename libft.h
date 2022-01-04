@@ -6,14 +6,13 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 13:25:59 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/16 20:48:35 by cbukuba          ###   ########.fr       */
+/*   Updated: 2021/12/16 03:48:40 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
 # include <stdlib.h>
 # include <stddef.h>
 # include <unistd.h>
