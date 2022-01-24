@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:34:10 by cbukuba           #+#    #+#             */
-/*   Updated: 2022/01/20 10:52:38 by cbukuba          ###   ########.fr       */
+/*   Updated: 2022/01/24 11:26:21 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	ft_atoi(char const *str)
 {
 	int	i;
-	int	sign;
-	int	ent;
+	int sign;
+	int ent;
 
 	i = 0;
 	sign = 1;
@@ -43,6 +43,6 @@ int	ft_atoi(char const *str)
 
 // int main()
 // {
-// 	printf("%d\n", atoi("-92233720368547758051"));
-// 	printf("%d", ft_atoi("-92233720368547758051"));
+// 	printf("%d\n", atoi("10223372036854775807"));
+// 	printf("%d", ft_atoi("10223372036854775807"));
 // }

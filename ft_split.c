@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:37:44 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/12/12 23:36:24 by cbukuba          ###   ########.fr       */
+/*   Updated: 2022/01/24 10:10:28 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,8 @@ char	**ft_split(char const *s, char c)
 	char	**tab;
 	int		len;
 
+	if (!s)
+		return (NULL);
 	len = word_count(s, c);
 	tab = malloc(sizeof(char *) * (len + 1));
 	if (!tab)

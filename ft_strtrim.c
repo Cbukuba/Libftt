@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:41:56 by cbukuba           #+#    #+#             */
-/*   Updated: 2021/11/19 12:13:17 by cbukuba          ###   ########.fr       */
+/*   Updated: 2022/01/24 10:11:43 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		start;
 	int		len;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
 	while (find_in_set(s1[start], set) && s1[start])
 		start ++;

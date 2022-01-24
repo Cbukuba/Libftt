@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:31:44 by cbukuba           #+#    #+#             */
-/*   Updated: 2022/01/04 17:47:59 by cbukuba          ###   ########.fr       */
+/*   Updated: 2022/01/24 10:09:30 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char		*str;
 	size_t		p;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	p = ft_strlen(s);
 	if (p < start)
