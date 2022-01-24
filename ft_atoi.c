@@ -6,7 +6,7 @@
 /*   By: cbukuba <cbukuba@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 09:34:10 by cbukuba           #+#    #+#             */
-/*   Updated: 2022/01/24 11:26:21 by cbukuba          ###   ########.fr       */
+/*   Updated: 2022/01/24 11:39:43 by cbukuba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	ft_atoi(char const *str)
 {
 	int	i;
-	int sign;
-	int ent;
+	int	sign;
+	int	ent;
 
 	i = 0;
 	sign = 1;
